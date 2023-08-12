@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AngularJS Calculator App</title>
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body ng-app="CalculatorApp">
+    <div ng-controller="CalculatorController">
+      <div id="calculatorContainer">
+        <div id="displayWindow"><h3>{{output}}</h3></div>
+        <div>
+          <button class="operator-button" ng-click="clear()">CLEAR</button>
+        </div>
+        <div id="numberGrid">
+          <div>
+            <button class="number-button" ng-click="appendNumber(1)">
+              <h2>1</h2>
+            </button>
+            <button class="number-button" ng-click="appendNumber(2)">
+              <h2>2</h2>
+            </button>
+            <button class="number-button" ng-click="appendNumber(3)">
+              <h2>3</h2>
+            </button>
+            <button id="add-icon" class="operator-button">
+              <h2>+</h2>
+            </button>
+          </div>
+          <div>
+            <button class="number-button" ng-click="appendNumber(4)">
+              <h2>4</h2>
+            </button>
+            <button class="number-button" ng-click="appendNumber(5)">
+              <h2>5</h2>
+            </button>
+            <button class="number-button" ng-click="appendNumber(6)">
+              <h2>6</h2>
+            </button>
+            <button id="sub-icon" class="operator-button"><h2>-</h2></button>
+          </div>
+          <div>
+            <button class="number-button" ng-click="appendNumber(7)">
+              <h2>7</h2>
+            </button>
+            <button class="number-button" ng-click="appendNumber(8)">
+              <h2>8</h2>
+            </button>
+            <button class="number-button" ng-click="appendNumber(9)">
+              <h2>9</h2>
+            </button>
+            <button id="equals-icon" class="operator-button"><h2>=</h2></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

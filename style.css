@@ -1,0 +1,74 @@
+#calculatorContainer {
+  position: absolute; /* Take the container out of regular document flow */
+  /* Center the div */
+  top: 50%; /* set the top of the div to the middle of the page */
+  left: 50%; /* set the left of the div to the middle of the page */
+  transform: translate(-50%, -50%);
+
+  /* Dimensions of Calculator */
+  width: 35%;
+  height: 75%;
+
+  background-color: rgb(197, 187, 187);
+  border: 10px solid;
+  border-radius: 2rem;
+  border-color: rgb(79, 175, 206);
+}
+
+#displayWindow {
+  width: 90%;
+  height: 100px;
+  margin-left: 25px;
+  margin-top: 15px;
+  border: 5px solid;
+  border-radius: 2rem;
+  border-color: black;
+  background-color: grey;
+}
+
+#numberGrid {
+  position: absolute;
+  left: 5%;
+  top: 40%;
+}
+
+.number-button {
+  width: 130px;
+  height: 130px;
+  border: 2px solid;
+  border-radius: 2rem;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+.operator-button {
+  width: 130px;
+  height: 130px;
+  border: 2px solid;
+  border-radius: 2rem;
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
+#equals-icon {
+  background-color: green;
+}
+
+#add-icon {
+  background-color: orange;
+}
+
+#sub-icon {
+  background-color: red;
+}
+
+/* Operator and number buttons*/
+h2 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 80px;
+  float: right;
+  margin-right: 25px;
+}
