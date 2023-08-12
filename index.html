@@ -11,48 +11,53 @@
   <body ng-app="CalculatorApp">
     <div ng-controller="CalculatorController">
       <div id="calculatorContainer">
-        <div id="displayWindow"><h3>{{output}}</h3></div>
-        <div>
-          <button class="operator-button" ng-click="clear()">CLEAR</button>
+        <div id="displayWindow">
+          <span id="expression">{{expression}}</span>
         </div>
-        <div id="numberGrid">
+
+        <div id="grid">
           <div>
-            <button class="number-button" ng-click="appendNumber(1)">
-              <h2>1</h2>
+            <button class="button">
+              <span>(</span>
             </button>
-            <button class="number-button" ng-click="appendNumber(2)">
-              <h2>2</h2>
+            <button class="button" ng-click="clear()">
+              <span>)</span>
             </button>
-            <button class="number-button" ng-click="appendNumber(3)">
-              <h2>3</h2>
-            </button>
-            <button id="add-icon" class="operator-button">
-              <h2>+</h2>
+            <button class="button" ng-click="appendToOutput('%')">%</button>
+            <button class="button" ng-click="clear()">CE</button>
+          </div>
+          <div>
+            <button class="button" ng-click="appendToOutput(1)">1</button>
+            <button class="button" ng-click="appendToOutput(2)">2</button>
+            <button class="button" ng-click="appendToOutput(3)">3</button>
+            <button id="div-icon" class="button" ng-click="appendToOutput('/')">
+              /
             </button>
           </div>
           <div>
-            <button class="number-button" ng-click="appendNumber(4)">
-              <h2>4</h2>
+            <button class="button" ng-click="appendToOutput(4)">4</button>
+            <button class="button" ng-click="appendToOutput(5)">5</button>
+            <button class="button" ng-click="appendToOutput(6)">6</button>
+            <button
+              id="mult-icon"
+              class="button"
+              ng-click="appendToOutput('*')"
+            >
+              *
             </button>
-            <button class="number-button" ng-click="appendNumber(5)">
-              <h2>5</h2>
-            </button>
-            <button class="number-button" ng-click="appendNumber(6)">
-              <h2>6</h2>
-            </button>
-            <button id="sub-icon" class="operator-button"><h2>-</h2></button>
           </div>
           <div>
-            <button class="number-button" ng-click="appendNumber(7)">
-              <h2>7</h2>
-            </button>
-            <button class="number-button" ng-click="appendNumber(8)">
-              <h2>8</h2>
-            </button>
-            <button class="number-button" ng-click="appendNumber(9)">
-              <h2>9</h2>
-            </button>
-            <button id="equals-icon" class="operator-button"><h2>=</h2></button>
+            <button class="button" ng-click="appendToOutput(7)">7</button>
+            <button class="button" ng-click="appendToOutput(8)">8</button>
+            <button class="button" ng-click="appendToOutput(9)">9</button>
+
+            <button class="button" ng-click="appendToOutput('-')">-</button>
+          </div>
+          <div>
+            <button class="button" ng-click="appendToOutput(0)">0</button>
+            <button class="button" ng-click="appendToOutput('.')">.</button>
+            <button class="button" ng-click="calculate()">=</button>
+            <button class="button" ng-click="appendToOutput('+')">+</button>
           </div>
         </div>
       </div>

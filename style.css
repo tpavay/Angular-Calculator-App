@@ -1,3 +1,4 @@
+/* ----- ID Styling ----- */
 #calculatorContainer {
   position: absolute; /* Take the container out of regular document flow */
   /* Center the div */
@@ -26,28 +27,17 @@
   background-color: grey;
 }
 
-#numberGrid {
+#grid {
   position: absolute;
-  left: 5%;
-  top: 40%;
+  left: 8%;
+  top: 30%;
 }
 
-.number-button {
-  width: 130px;
-  height: 130px;
-  border: 2px solid;
-  border-radius: 2rem;
-  margin-left: 5px;
-  margin-bottom: 10px;
-}
-
-.operator-button {
-  width: 130px;
-  height: 130px;
-  border: 2px solid;
-  border-radius: 2rem;
-  margin-left: 5px;
-  margin-bottom: 10px;
+#expression {
+  font-size: 70px;
+  float: right;
+  margin-top: 5px;
+  margin-right: 5px;
 }
 
 #equals-icon {
@@ -62,13 +52,22 @@
   background-color: red;
 }
 
-/* Operator and number buttons*/
-h2 {
-  font-size: 50px;
+/* ----- Class Styling ----- */
+.button {
+  width: 120px;
+  height: 90px;
+  border: 2px solid;
+  border-radius: 2rem;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 40px;
 }
 
-h3 {
-  font-size: 80px;
-  float: right;
-  margin-right: 25px;
+.operator-button {
+  width: 90px;
+  height: 90px;
+  border: 2px solid;
+  border-radius: 2rem;
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
