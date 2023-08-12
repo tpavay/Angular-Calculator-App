@@ -14,7 +14,7 @@
       Piece: The piece to be appended to the expression
       isOperator: Whether or not the piece is an operator
       */
-      $scope.appendToOutput = function (piece, isOperator) {
+      $scope.appendToOutput = function (piece) {
         // Reset expression if we just calculated it before validating the new piece
         if ($scope.calculationOccurred) {
           $scope.expression = "";
@@ -22,7 +22,11 @@
         }
 
         if (!isInvalidPiece(piece, $scope.expression)) {
-          if (isOperator) {
+          let expLen = $scope.expression.length;
+          if (
+            isOperator(piece) ||
+            isOperator($scope.expression.charAt(expLen - 1))
+          ) {
             $scope.expression += " ";
           }
           $scope.expression += piece;
